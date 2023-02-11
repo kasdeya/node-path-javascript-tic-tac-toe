@@ -94,7 +94,11 @@ const GameFlow = {
         winningTileTwo.style.backgroundColor = "lightgreen";
         winningTileThree.style.backgroundColor = "lightgreen";
         // console.log("game over");
-        gameStatus.textContent = "Game Over";
+        if (playerOne.name) {
+        gameStatus.textContent = `Game Over ${playerOne.name} Wins`;
+        } else {
+        gameStatus.textContent = `Game Over Player One Wins`;
+        }
         isGameOver = true;
         return;
       } else if (values.every((v) => v === "O")) {
@@ -108,7 +112,7 @@ const GameFlow = {
         winningTileTwo.style.backgroundColor = "lightgreen";
         winningTileThree.style.backgroundColor = "lightgreen";
         // console.log("game over");
-        gameStatus.textContent = "Game Over";
+        gameStatus.textContent = "Game Over AI Wins";
         isGameOver = true;
         return;
       }
