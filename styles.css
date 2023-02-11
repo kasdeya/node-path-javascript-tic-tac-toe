@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Fredoka One", cursive;
+  background-color: lightslategrey;
+}
+
+.container {
+  /* border: 1px solid yellow; */
+  width: 25em;
+  height: 25em;
+  margin: auto;
+  margin-top: 3em;
+}
+
+.gameBoard {
+  /* border: 1px solid red; */
+  display: grid;
+  gap: 1px;
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+  width: 100%;
+}
+
+.gameBoard > div {
+  display: flex;
+  justify-content: center;
+  /* align-items: center; */
+  font-size: 7rem;
+  /* border: 1px solid green; */
+  background-color: #ccc;
+  /* text-align: center; */
+  cursor: pointer;
+}
+
+.gameBoard > div:hover {
+  background-color: antiquewhite;
+}
+
+.restartBtn {
+  /* text-align: center; */
+  margin-top: 2rem;
+  position: absolute;
+  padding: .5em;
+  width: 20em;
+  margin-left: 4rem;
+  background-color: transparent;
+  /*  display:inline-block; */
+  /*  padding:0.35em 1.2em; */
+  border:0.1em solid #FFFFFF;
+  /* margin:0 0.3em 0.3em 0; */
+  border-radius:0.12em;
+  box-sizing: border-box;
+  text-decoration:none;
+  /* font-family:'Roboto',sans-serif;
+  font-weight:300; */
+  color:#FFFFFF;
+  text-align:center;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.restartBtn:hover {
+  color: #000000;
+  background-color: #FFFFFF;
+}
+
+#status {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-weight: 100;
+  color: #FFFFFF;
+  margin-bottom: 1.5rem;
+}
